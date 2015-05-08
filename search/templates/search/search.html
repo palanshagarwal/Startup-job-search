@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <title>Find Jobs!</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ --> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<style>
+.container{
+    margin-top:30px;
+}
+
+.filter-col{
+    padding-left:10px;
+    padding-right:10px;
+}
+
+</style>
+</head>
+<body><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="panel panel-default">
+                <div class="panel-body" style="margin-left:300px">
+                    <form class="form-inline" method="POST" role="form" action="http://127.0.0.1:8000/search/formData">
+                    {% csrf_token %}
+                        <div class="form-group">    
+                            <input type="text" class="form-control" name='location' placeholder="Location"> 
+                            <!-- <label class="filter-col" style="margin-right:0;">Skill Type:</label>
+                            <select class="form-control" name="skill">
+                                <option value="" selected="selected">--</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="manager">Manager</option>
+                                <option value="business">Business</option>
+                            </select> -->
+                        </div>
+                        <div class="form-group">    
+                            <input type="text" class="form-control" name="startup" placeholder="Startup..">
+                            <button type="submit" class="btn btn-default filter-col">
+                                <span class="glyphicon glyphicon-record"></span> Search Jobs
+                            </button>  
+                        </div>
+                    </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>
